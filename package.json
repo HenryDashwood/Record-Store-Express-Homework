@@ -1,0 +1,16 @@
+{
+  "name": "record-store",
+  "version": "1.0.0",
+  "main": "record.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
