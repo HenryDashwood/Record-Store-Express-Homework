@@ -128,21 +128,27 @@
 /***/ function(module, exports) {
 
 	module.exports = [
-	  {
-	    "artist": "Stornoway",
-	    "title": "Bonxie",
-	    "price": 10
-	  },
-	  {
-	    "artist": "Frank Turner",
-	    "title": "Positive Songs for Negative People",
-	    "price": 12
-	  },
-	  {
-	    "artist": "Hector Berlioz",
-	    "title": "Symphonie Fantastique",
-	    "price": 15
-	  }
+	  // {
+	  //   "name": "HMV",
+	  //   "city": "London",
+	  //   "records": [
+	      {
+	        "artist": "Stornoway",
+	        "title": "Bonxie",
+	        "price": 10
+	      },
+	      {
+	        "artist": "Frank Turner",
+	        "title": "Positive Songs for Negative People",
+	        "price": 12
+	      },
+	      {
+	        "artist": "Hector Berlioz",
+	        "title": "Symphonie Fantastique",
+	        "price": 15
+	      }
+	  //   ]
+	  // }
 	]
 
 /***/ },
@@ -188,9 +194,14 @@
 	  },
 	
 	  renderTo: function() {
+	    var storeTitle = document.getElementById('recordStoreName')
+	    storeTitle.innerText = "Store Name: " + this.recordStore.name;
+	
+	    var storeCity = document.getElementById('recordStoreCity')
+	    storeCity.innerText = "Store City: " + this.recordStore.city;
 	
 	    var recordListDisplay = document.getElementById('recordList');
-	    recordListDisplay.innerText = "Record List: " + this.recordStore.recordList;
+	    recordListDisplay.innerText = "Record List: " + this.recordStore.listInventory().listing;
 	
 	    var recordList = document.getElementById('records');
 	

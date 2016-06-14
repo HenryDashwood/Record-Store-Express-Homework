@@ -10,9 +10,14 @@ RecordStoreView.prototype = {
   },
 
   renderTo: function() {
+    var storeTitle = document.getElementById('recordStoreName')
+    storeTitle.innerText = "Store Name: " + this.recordStore.name;
+
+    var storeCity = document.getElementById('recordStoreCity')
+    storeCity.innerText = "Store City: " + this.recordStore.city;
 
     var recordListDisplay = document.getElementById('recordList');
-    recordListDisplay.innerText = "Record List: " + this.recordStore.recordList;
+    recordListDisplay.innerText = "Record List: " + this.recordStore.listInventory().listing;
 
     var recordList = document.getElementById('records');
 
